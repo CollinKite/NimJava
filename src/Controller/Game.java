@@ -43,8 +43,8 @@ public class Game {
 
     private void setup() {
         isGameOver = false;
-        stack1.setSticks(view.setStackCount("Stack 1"));
-        stack2.setSticks(view.setStackCount("Stack 2"));
+        stack1.setSticks(view.difficulty());
+        stack2.setSticks(view.difficulty());
         player1.setName(view.askForName("Player 1"));
         player2.setName(view.askForName("Player 2"));
         setRandomPlayerTurn();
