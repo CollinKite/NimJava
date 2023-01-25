@@ -43,8 +43,9 @@ public class Game {
 
     private void setup() {
         isGameOver = false;
-        stack1.setSticks(view.difficulty());
-        stack2.setSticks(view.difficulty());
+        int difficulty = view.difficulty();
+        stack1.setSticks(difficulty);
+        stack2.setSticks(difficulty);
         player1.setName(view.askForName("Player 1"));
         player2.setName(view.askForName("Player 2"));
         setRandomPlayerTurn();
@@ -53,8 +54,9 @@ public class Game {
 
     private void AISetup() {
         isGameOver = false;
-        stack1.setSticks(view.setStackCount("Stack 1"));
-        stack2.setSticks(view.setStackCount("Stack 2"));
+        int difficulty = view.difficulty();
+        stack1.setSticks(difficulty);
+        stack2.setSticks(difficulty);
         player1.setName(view.askForName("Player 1"));
         player2.setName("AI");
         setRandomPlayerTurn();
